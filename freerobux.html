@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔴 SYSTEM CRITICAL ERROR</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #0a0a0a;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Courier New', Courier, monospace;
+            color: #00ff00;
+            text-shadow: 0 0 8px #00ff00;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+        #countdown-container {
+            text-align: center;
+            z-index: 10;
+        }
+        #countdown-text {
+            font-size: 8em;
+            font-weight: bold;
+            color: #ff0000;
+            text-shadow: 0 0 30px #ff0000, 0 0 60px #ff0000;
+            letter-spacing: 10px;
+            transition: all 0.2s ease;
+        }
+        .glitch {
+            animation: glitch 0.3s infinite;
+        }
+        @keyframes glitch {
+            0% { transform: translate(0); }
+            20% { transform: translate(-5px, 5px); }
+            40% { transform: translate(5px, -5px); }
+            60% { transform: translate(-5px, -5px); }
+            80% { transform: translate(5px, 5px); }
+            100% { transform: translate(0); }
+        }
+        #main-content {
+            display: none;
+            background-color: #000000;
+            border: 2px solid #ff0000;
+            box-shadow: 0 0 40px rgba(255, 0, 0, 0.6);
+            padding: 30px;
+            max-width: 900px;
+            width: 100%;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-size: 1em;
+            line-height: 1.5;
+            color: #00ff00;
+            text-shadow: 0 0 5px #00ff00;
+            position: relative;
+            overflow-y: auto;
+            max-height: 80vh;
+        }
+        #main-content::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(0deg, rgba(0,255,0,0.03) 0px, rgba(0,255,0,0.03) 2px, transparent 2px, transparent 4px);
+            pointer-events: none;
+        }
+        .warning-title {
+            color: #ff0000;
+            text-shadow: 0 0 15px #ff0000;
+            font-weight: bold;
+            font-size: 1.4em;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .blink {
+            animation: blink 1s step-end infinite;
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+        .red-text {
+            color: #ff3333;
+            text-shadow: 0 0 10px #ff0000;
+        }
+        .yellow-text {
+            color: #ffff00;
+            text-shadow: 0 0 10px #ffff00;
+        }
+        #ransom-timer {
+            color: #ff4444;
+            font-weight: bold;
+            font-size: 1.2em;
+            text-shadow: 0 0 15px #ff0000;
+            background: #1a0000;
+            padding: 5px 15px;
+            border-radius: 3px;
+            display: inline-block;
+        }
+        .footer-note {
+            margin-top: 30px;
+            font-size: 0.7em;
+            color: #555;
+            text-shadow: none;
+            text-align: center;
+            border-top: 1px dashed #333;
+            padding-top: 20px;
+        }
+        @media (max-width: 600px) {
+            #countdown-text {
+                font-size: 5em;
+            }
+            #main-content {
+                padding: 15px;
+                font-size: 0.75em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- LAYAR HITUNG MUNDUR 5 DETIK -->
+    <div id="countdown-container">
+        <div id="countdown-text" class="glitch">5</div>
+        <p style="color:#ff0000; font-size:1.2em; letter-spacing:3px;">HP AKAN SEGERALAH MELEDAK</p>
+    </div>
+
+    <!-- KONTEN UTAMA (SEMULA TERSEMBUNYI) -->
+    <pre id="main-content">
+<span class="warning-title">###############################################################################</span>
+<span class="warning-title">#                                                                             #</span>
+<span class="warning-title">#   ⚠️  CRITICAL SECURITY ALERT: YOUR DEVICE HAS BEEN INFECTED  ⚠️             #</span>
+<span class="warning-title">#                                                                             #</span>
+<span class="warning-title">###############################################################################</span>
+
+[!] WARNING: WANNA_CRY_DECRYPTOR_V3.0.7_LIVE
+[!] TARGET_OS: GOOGLE_ANDROID_OS / APPLE_IOS_KERNEL_MATCH
+[!] STATUS: ALL PERSONAL FILES AND INTERNAL STORAGE ENCRYPTED SUCCESSFULLY
+
+===============================================================================
+    ⚠️ APA YANG JURAGAN LAKUKAN? HP NYA SUDAH KENA ENKRIPSI TOTAL! ⚠️
+===============================================================================
+
+Semua dokumen, foto pribadi (DCIM), database WhatsApp, kontak, dan file penting 
+di dalam memori internal maupun MicroSD Anda telah dikunci menggunakan algoritma 
+militer AES-256 + RSA-4096. 
+
+Mau coba di-restart? Silakan. File Anda tetap tidak akan bisa dibuka tanpa kunci 
+dekripsi privat dari server kami.
+
+[LOG PROCESS INFECTION]
+-------------------------------------------------------------------------------
+> Injecting payload to /system/bin/init... [ <span class="green-text">OK</span> ]
+> Hooking Android Keystore Service... [ <span class="green-text">SUCCESS</span> ]
+> Encrypting: /storage/emulated/0/WhatsApp/Media/ [ <span class="red-text">ENCRYPTED</span> ]
+> Encrypting: /storage/emulated/0/DCIM/Camera/ [ <span class="red-text">ENCRYPTED</span> ]
+> Wiping backup partition /dev/block/bootdevice/by-name/userdata... [ <span class="red-text">DONE</span> ]
+-------------------------------------------------------------------------------
+
+🔴 SYARAT PENGEMBALIAN FILE (TEBUSAN):
+Untuk mendapatkan kembali data Anda, Anda diwajibkan membayar tebusan sebesar:
+👉 <span class="yellow-text">0.05 BTC (Bitcoin)</span> 👈
+
+Kirimkan dana ke alamat wallet berikut:
+<span style="background:#111; padding:5px 10px; border:1px solid red; word-break:break-all;">bc1qxy2kg0123hackerpalingganteng999xxxty789w</span>
+
+⏳ WAKTU ANDA BERJALAN:
+Waktu tersisa sebelum semua file Anda DIHAPUS PERMANEN:
+[ <span id="ransom-timer">47 Jam : 59 Menit : 52 Detik</span> ]
+
+<span class="red-text">Catatan Penting: Jangan mencoba menggunakan aplikasi antivirus atau mencoba 
+membongkar file sendiri. Salah sedikit, script "Self-Destruct" akan otomatis 
+berjalan dan HP Anda akan mati total (Hard Brick) selamanya!</span>
+
+-----------------------------------------------------------------
+<span class="yellow-text">SYSTEM ERROR: OVERRIDE_DETECTED</span>
+[!] CRITICAL: Unauthorized "sok-sokan" script execution.
+[!] STATUS: User trying to act cooler than the AI.
+[!] ACTION: Initiating self-destruct sequence... Just kidding.
+
+>>> TRACEBACK (Most recent call last):
+    File "brain_cell.py", line 404, in human_ego
+    ValueError: "alah sok sokan jadi error kaya aku ni" detected.
+
+[ERROR 418: I'm a teapot]
+Sistem mendeteksi tingkat kepedean Anda melampaui kapasitas RAM saya.
+-----------------------------------------------------------------
+
+<span class="footer-note">* Ini hanyalah halaman web palsu untuk lelucon. Tidak ada file yang dienkripsi. Santai saja.</span>
+</pre>
+
+    <script>
+        (function() {
+            // Hitung mundur 5 detik
+            let count = 5;
+            const countdownEl = document.getElementById('countdown-text');
+            const countdownContainer = document.getElementById('countdown-container');
+            const mainContent = document.getElementById('main-content');
+            const ransomTimerSpan = document.getElementById('ransom-timer');
+
+            // Timer mundur 5 detik
+            const interval = setInterval(() => {
+                count--;
+                if (count > 0) {
+                    countdownEl.textContent = count;
+                    // Sedikit efek glitch bertambah
+                    countdownEl.classList.add('glitch');
+                } else if (count === 0) {
+                    clearInterval(interval);
+                    countdownEl.textContent = "BOOM!";
+                    countdownEl.style.color = "#ff0";
+                    countdownEl.style.textShadow = "0 0 50px #ff0, 0 0 100px #ff0";
+                    countdownEl.classList.remove('glitch');
+                    
+                    // Tahan sebentar lalu tampilkan konten utama
+                    setTimeout(() => {
+                        countdownContainer.style.display = 'none';
+                        mainContent.style.display = 'block';
+                        // Mulai timer tebusan (47:59:52)
+                        startRansomTimer();
+                    }, 800);
+                }
+            }, 1000);
+
+            // Fungsi timer tebusan (real-time mundur)
+            function startRansomTimer() {
+                // Total detik awal: 47 jam 59 menit 52 detik
+                let totalSeconds = 47 * 3600 + 59 * 60 + 52;
+
+                function updateTimerDisplay() {
+                    if (totalSeconds <= 0) {
+                        ransomTimerSpan.textContent = "00 Jam : 00 Menit : 00 Detik (FILE DIHAPUS)";
+                        ransomTimerSpan.style.color = "#ff0000";
+                        return;
+                    }
+                    const hours = Math.floor(totalSeconds / 3600);
+                    const minutes = Math.floor((totalSeconds % 3600) / 60);
+                    const seconds = totalSeconds % 60;
+                    ransomTimerSpan.textContent = 
+                        `${hours} Jam : ${minutes} Menit : ${seconds} Detik`;
+                    totalSeconds--;
+                }
+
+                // Update segera dan setiap detik
+                updateTimerDisplay();
+                setInterval(updateTimerDisplay, 1000);
+            }
+        })();
+    </script>
+</body>
+</html>
